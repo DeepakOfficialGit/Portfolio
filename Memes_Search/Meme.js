@@ -1,4 +1,4 @@
-const API_KEY = 'JjtuWTZMzhqXWRujAeS0RthZtVn1jwNF';
+const API_KEY = 'JjtuWTZMzhqXWRujAeS0RthZtVn1jwNF';  //API
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
 const limitSelect = document.getElementById('limitSelect');
