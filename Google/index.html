@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="website icon" type="png" href="web_icon.png">
+    
+    <link rel="website icon" type="png" href="images/google_icon.png">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
         <div class="main">
             <img src="./images/google.png" alt="">
             <div class="searchBox">
-                <input type="text" class="search">
+                <input type="text" class="search" id="search">
                 <div class="icons">
                     <div>
                         <img src="./images/search.png" alt="">
@@ -43,7 +44,7 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="searchbtn">Google Search</button>
+                <button class="searchbtn" id="clicks">Google Search</button>
                 <button>I'm Feeling Lucky</button>
 
             </div>
@@ -103,8 +104,6 @@
     </section>
 </body>
 <script>
-    
-
     let query=document.querySelector('.search');
     let searchbtn=document.querySelector('.searchbtn');
 
@@ -113,5 +112,9 @@
 
         window.open(url,'_self');
     }
+
+    search.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') clicks.click();
+    });
 </script>
 </html>

@@ -6,7 +6,8 @@
     <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="Amazon_Cloning.css">
-    <link rel="website icon" type="png" href="web_icon.png">
+    
+    <link rel="website icon" type="png" href="Images/web_icon.png">
 </head>
 
 <body>
@@ -33,9 +34,9 @@
                 <select class="search—select">
                     <option>All</option>
                 </select>
-                <input placeholder="Search Amazon" class="search-input">
+                <input placeholder="Search Amazon" class="search-input" id="search">
                 <div class="search_icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass" id="clicks"></i>
                 </div>
             </div>
 
@@ -224,6 +225,10 @@
         let url = 'https://www.amazon.com/s?k='+query.value;
 
         window.open(url,'_self');
-    }
+    }
+
+    search.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') clicks.click();
+    });
 </script>
 </html>
